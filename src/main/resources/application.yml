@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: test
+
+---
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shopdb
+    username: root
+    password: 1234
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      format_sql: true
+      ddl-auto: create
+---
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:h2:mem:test;MODE=mysql;NON_KEYWORDS=USER  # http://localhost:8080/h2-console
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+
+    properties.hibernate.hbm2ddl.auto: create
+#    properties.hibernate.globally_quoted_identifiers: true
+    showSql: true
