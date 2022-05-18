@@ -1,7 +1,7 @@
 package com.example.mysqltest.entity;
 
 import com.example.mysqltest.config.TestQueryDslConfig;
-import com.example.mysqltest.repository.OrdersRepository;
+import com.example.mysqltest.repository.orders.OrdersRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
