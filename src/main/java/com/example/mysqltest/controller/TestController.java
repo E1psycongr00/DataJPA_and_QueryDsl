@@ -1,7 +1,7 @@
 package com.example.mysqltest.controller;
 
 import com.example.mysqltest.entity.Orders;
-import com.example.mysqltest.repository.OrdersRepository;
+import com.example.mysqltest.repository.orders.OrdersRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
