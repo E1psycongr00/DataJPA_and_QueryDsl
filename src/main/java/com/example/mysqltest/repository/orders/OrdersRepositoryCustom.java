@@ -1,4 +1,4 @@
-package com.example.mysqltest.repository;
+package com.example.mysqltest.repository.orders;
 
 import com.example.mysqltest.entity.Orders;
 
