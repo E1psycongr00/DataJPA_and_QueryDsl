@@ -25,6 +25,9 @@ public class User {
 
     @Column(name = "password", nullable = false)
     private String password;
+    
+    @Column(name = "age")
+    private int age;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Orders> orderses = new ArrayList<>();
@@ -35,8 +38,9 @@ public class User {
 
 
     @Builder(setterPrefix = "set", builderMethodName = "getInstance")
-    private User(String nickname, String password) {
+    private User(String nickname, String password, int age) {
         this.nickname = nickname;
         this.password = password;
+        this.age = age;
     }
 }

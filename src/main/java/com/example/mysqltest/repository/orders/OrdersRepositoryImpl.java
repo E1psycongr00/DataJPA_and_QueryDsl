@@ -1,6 +1,7 @@
-package com.example.mysqltest.repository;
+package com.example.mysqltest.repository.orders;
 
 import com.example.mysqltest.entity.Orders;
+
 import com.example.mysqltest.entity.QOrders;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;

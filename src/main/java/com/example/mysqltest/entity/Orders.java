@@ -3,7 +3,6 @@ package com.example.mysqltest.entity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @NoArgsConstructor
@@ -19,7 +18,7 @@ public class Orders {
     @Column(name = "item")
     private String item;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_user_id")
     private User user;
 
